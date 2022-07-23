@@ -1,0 +1,32 @@
+.add-form{
+    background-color:rgb(240, 240, 240);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 5em;
+
+    font-weight: bold;
+}
+
+.add-input{
+    border: none;
+    border-radius: 10px;
+    width: 260px;
+    height: 40px;
+
+    margin: 20px;
+}
+
+.add-button{
+    background-color: rgb(67, 134, 125);
+
+    border: none;
+    border-radius: 10px;
+    width: 130px;
+    height: 40px;
+
+    color: white;
+    font-weight: bold;
+}

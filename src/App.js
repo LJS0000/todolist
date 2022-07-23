@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Header from "./components/header/Header";
+import Form from "./components/form/Form";
+import List from "./components/list/List";
 
 function App() {
+  const [title, setTitle] = useState("");
+  const [todos, setTodos] = useState([
+    {
+      id: 1,
+      title: "react를 배워봅시다.",
+    },
+  ]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div>
+        <Header />
+      </div>
+      <div>
+        <Form />
+      </div>
+      <div>
+        <List />
+      </div>
+
+      <h1>Working🔥</h1>
+        <div className="todos-container">
+          {todos.map((todo) => (
+            <div className="todo" key={todo.id}>
+              {todo.title}
+            </div>
+          ))}
+        </div>
+      <h1>Done🎉</h1>
+     
     </div>
-  );
+  )
 }
 
 export default App;
