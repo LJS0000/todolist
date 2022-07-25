@@ -9,8 +9,9 @@ function Form(props) {
         {
           id: 1,
           title: "react어려워요T^T",
-          body: '과제가 너무 어려워요'
-        },
+          body: '과제가 너무 어려워요',
+          isDone: false
+        }
       ]);
     // console.log(title, body)
     return (

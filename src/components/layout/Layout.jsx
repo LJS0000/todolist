@@ -1,29 +1,19 @@
-import { useState } from "react";
-import "./App.css";
-import Header from "./components/header/Header";
-import Form from "./components/form/Form";
-import List from "./components/list/List";
+// import { useState } from "react";
+import React from "react";
+import "./style.css";
+import Header from "../header/Header";
+import Form from "../form/Form";
+import List from "../list/List";
 
-function Layout() {
-    const [Layout, setLayout] = useState("");
-  return (
-    <div className="layout">
-      <div>
-        <Header />
-      </div>
-      <div>
-        <Form />
-      </div>
-      <div>
-        <List />
-      </div>
-
-      <h1>Working🔥</h1>
-       
-      <h1>Done🎉</h1>
-     
-    </div>
-  )
-}
-
-export default Layout;
+function Layout(props) {
+    return (
+        <div className="todolist">
+            {/* <div>나는 레이아웃.jsx</div> */}
+            <Header/>
+            <Form/>
+            <List/>
+        </div>
+    )  
+  }    
+  
+  export default Layout

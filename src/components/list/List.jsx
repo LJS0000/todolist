@@ -1,20 +1,16 @@
-import React, { useState } from "react";
+// import { useState } from "react";
+import React from "react";
 import "./style.css";
 import Todo from "../todo/Todo";
 
+
 function List(props) {
-    
-        return (
-            <div className="list-container">
-                <h1 className="list-title">Working🔥</h1>
-                    <div className="list-wrapper">
-                    <div>
-                        <Todo />
-                    </div>
-                    </div>
-                <h1 className="list-title">Done🎉</h1>
-            </div>
-        )  
+  return (
+      <div className="todolist">
+          <div>나는 리스트.jsx</div>
+          <Todo/>
+      </div>
+  )  
 }    
 
 export default List
