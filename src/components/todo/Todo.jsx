@@ -4,16 +4,12 @@ import Form from "../form/Form";
 
 function Todo(props) {
     const [todos, setTodos] = useState([
-        {
-          id: 1,
-          title: "react어려워요T^T",
-          body: '과제가 너무 어려워요'
-        },
-      ]);
+        {id: 0, title: “”, body: “”, isDone: false}
+    ])
         return (
             <div className="todo-container">
-                {todos.map((todo) => (
-                    <div className="todo" key={todo.id}>
+                {setTodos.map((todos) => (
+                    <div className="todos" key={todo.id}>
                     {todo.title}
                     {todo.body}
                     </div>
