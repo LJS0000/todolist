@@ -7,8 +7,12 @@ import Todo from "../todo/Todo";
 function List(props) {
   return (
       <div className="todolist">
-          <div>나는 리스트.jsx</div>
-          <Todo/>
+          <div>
+            <h2>Working 🔥</h2>
+            <Todo/>
+            <h2>Done 🎉</h2>
+            
+          </div>
       </div>
   )  
 }    

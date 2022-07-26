@@ -1,22 +1,18 @@
-import React, { useState } from "react";
 import "./style.css";
-import Form from "../form/Form";
 
-function Todo(props) {
-    const [todo, setTodo] = useState([
-        {
-            id: 0,
-            title: '',
-            body: '',
-            isDone: false,
-        },
-    ])
+function Todo({todos}) {
+    console.log(todos)
     return (
-        <div className="todolist">
-            
-            <div>나는 투두.jsx</div>
+      <div className="todo-container">
+        <div>
+    
         </div>
-    )  
-  }    
-  
-  export default Todo
+        <div>
+          <button className="todo-delete-button button">삭제하기</button>
+          <button className="todo-complete-button button">완료</button>
+        </div>
+      </div>
+    )   
+}
+
+export default Todo
