@@ -32,3 +32,16 @@
     color: white;
     font-weight: bold;
 }
+
+.todo {
+    border: solid 4px rgb(67, 134, 125);
+    border-radius: 10px;
+   
+    width: 320px;
+    padding: 12px 24px 24px 24px;   
+    margin: 10px;
+
+
+    float: left;
+    
+}
