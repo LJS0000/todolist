@@ -40,80 +40,84 @@ function Form() {
           추가하기
         </button>
       </div>
-      <div className="vertical">
-          <h1>Working 🔥</h1>
-          <div>  
-          {todos
-          .filter((todo)=> !todo.isDone)
-          .map((todo) => {
-            return (
-              <div className="todoBoxes">
-                <div className="todo" key={todo.id}>
+      
+        <div className="working">
+            <h1>Working 🔥</h1>
+              <div className="wrap">  
+                  {todos
+                  .filter((todo)=> !todo.isDone)
+                  .map((todo) => {
+                    return (
+                      <div className="todoBoxes">
+                        <div className="todo" key={todo.id}>
 
-                  <h2>{todo.title}</h2>
-                  <h4>{todo.body}</h4>
+                          <h2>{todo.title}</h2>
+                          <h4>{todo.body}</h4>
 
-                  <div className="buttons">
-                    <button className="todo-delete-button button"
-                      onClick={()=>
-                        setTodos((prev)=>
-                        prev.filter((prev)=>prev.id!==todo.id))}
-                    >삭제하기</button>
-                    <button className="todo-complete-button button"
-                      onClick={()=>
-                        setTodos((prevs)=>
-                        prevs.map((prev)=> {
-                          if (prev.id === todo.id) {
-                            return {...prev, isDone: true}
-                          }
-                          return prev;
-                        })
-                      )}
-                    >완료</button>
-                  </div>
+                          <div className="buttons">
+                            <button className="todo-delete-button button"
+                              onClick={()=>
+                                setTodos((prev)=>
+                                prev.filter((prev)=>prev.id!==todo.id))}
+                            >삭제하기</button>
+                            <button className="todo-complete-button button"
+                              onClick={()=>
+                                setTodos((prevs)=>
+                                prevs.map((prev)=> {
+                                  if (prev.id === todo.id) {
+                                    return {...prev, isDone: true}
+                                  }
+                                  return prev;
+                                })
+                              )}
+                            >완료</button>
+                          </div>
 
-                </div>
-              </div>
-            )
-          })}
-          </div> 
-          <h1>Done 🎉</h1>
+                        </div>
+                      </div>
+                    )
+                  })}
+              </div> 
+          </div>      
           <div>
-            {todos
-            .filter((todo)=> todo.isDone)
-            .map((todo) => {
-              return (
-                <div className="todoBoxes">
-                  <div className="todo" key={todo.id}>
+              <h1>Done 🎉</h1>
+              <div className="wrap">
+                {todos
+                .filter((todo)=> todo.isDone)
+                .map((todo) => {
+                  return (
+                    <div className="todoBoxes">
+                      <div className="todo" key={todo.id}>
 
-                    <h2>{todo.title}</h2>
-                    <h4>{todo.body}</h4>
+                        <h2>{todo.title}</h2>
+                        <h4>{todo.body}</h4>
 
-                    <div className="buttons">
-                      <button className="todo-delete-button button"
-                        onClick={()=>
-                          setTodos((prev)=>
-                          prev.filter((prev)=>prev.id!==todo.id))}
-                      >삭제하기</button>
-                      <button className="todo-complete-button button"
-                        onClick={()=>
-                          setTodos((prevs)=>
-                          prevs.map((prev)=> {
-                            if (prev.id === todo.id) {
-                              return {...prev, isDone: false}
-                            }
-                            return prev;
-                          })
-                        )}
-                      >취소</button>
+                        <div className="buttons">
+                          <button className="todo-delete-button button"
+                            onClick={()=>
+                              setTodos((prev)=>
+                              prev.filter((prev)=>prev.id!==todo.id))}
+                          >삭제하기</button>
+                          <button className="todo-complete-button button"
+                            onClick={()=>
+                              setTodos((prevs)=>
+                              prevs.map((prev)=> {
+                                if (prev.id === todo.id) {
+                                  return {...prev, isDone: false}
+                                }
+                                return prev;
+                              })
+                            )}
+                          >취소</button>
+                        </div>
+
+                      </div>
                     </div>
-
-                  </div>
-                </div>
-              )
-            })}
+                  )
+                })}
+            </div>
           </div>  
-      </div>
+      
     </div>
   )
 }    

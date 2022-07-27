@@ -38,10 +38,14 @@
     border-radius: 10px;
    
     width: 320px;
+    height: 215px;
     padding: 12px 24px 24px 24px;   
     margin: 10px;
-
-
-    float: left;
     
 }
+
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
