@@ -1,18 +1,17 @@
 import React from "react";
 import "./style.css";
-import Header from "../header/Header";
+import Header from '../header/Header'
 import Form from "../form/Form";
-
+import List from '../list/List'
 
 function Layout() {
 
     return (
-        <div className="todolist">
+        <div>      
             <Header/>
-            <Form />
-            {/* <List/> */}
-        </div>
+            <Form/>
+        </div>      
     )  
-  }    
-  
-  export default Layout
+      
+}  
+export default Layout

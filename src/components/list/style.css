@@ -1,4 +1,10 @@
 .list-container {
     width: 90%;
+    min-width: 240px;
     margin: auto;
+}
+
+.Wrap {
+    display: flex;
+    flex-wrap: wrap;
 }
