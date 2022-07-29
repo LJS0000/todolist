@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import Todo from "../todo/Todo";
+import '~bulma/sass/utilities/_all.sass';
 
 function List({todos, setTodos}) {
 
@@ -16,7 +16,6 @@ function List({todos, setTodos}) {
                 <div className="todo" key={todo.id}>
                   <h2>{todo.title}</h2>
                   <h4>{todo.body}</h4>
-                  {/* <Todo todos={todos} setTodos={setTodos} todo={todo}/> */}
                   <div className="buttons">
                     <button className="todo-delete-button button"
                       onClick={()=>
@@ -44,7 +43,7 @@ function List({todos, setTodos}) {
                         )
             })}
           </div>
-           <h1>Done 🔥</h1>
+           <h1>Done 🎉</h1>
           <div className="Wrap">
             {todos
             .filter((todo) => todo.isDone)

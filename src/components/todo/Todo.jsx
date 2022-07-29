@@ -1,9 +1,6 @@
-import { useState } from "react";
 import "./style.css";
 
 function Todo({todos, todo, setTodos}) {
-
-// console.log(todos)
   
   return (
     <div className="buttons">
